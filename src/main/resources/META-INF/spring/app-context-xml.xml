@@ -6,7 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id="messageProvider" class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider" c:message="Configurable Message!"/>
+<!-- 	<bean id="messageProvider" class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider" c:message="Configurable Message!"/>
 	<bean id="constructorConfusion" class="com.apress.prospring4.ch3.xml.ConstructorConfusion">
 		<constructor-arg value="90" type="int"/>
 	</bean>
@@ -29,13 +29,13 @@
 		</property>
 	</bean>
 	
-<!-- 	<bean id="target1" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBeanParent"/>
+	<bean id="target1" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBeanParent"/>
 	<bean id="target2" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBean"/>
 	<bean id="target3" class="com.apress.prospring4.ch3.SimpleTarget">
 		<property name="val">
 			<ref parent="injectBean"/>
 		</property>
-	</bean> -->
+	</bean> 
 	
 
 	<bean name="injectBean" class="java.lang.String" c:_0="Bean in child"/>
@@ -71,5 +71,16 @@
 		</property>
 
 	</bean>
+ -->	
+	<bean id="helper" class="com.apress.prospring4.ch3.MyHelper" scope="prototype"/>
 	
+	<bean id="abstractLookupBean" class="com.apress.prospring4.ch3.AbstractLookupDemoBean">
+		<lookup-method name="getMyHelper" bean="helper"/>
+	</bean>
+	
+	<bean id="standardLookupBean" class="com.apress.prospring4.ch3.StandardLookupDemoBean">
+		<property name="myHelper">
+			<ref bean="helper"/>
+		</property>
+	</bean>
 </beans>
