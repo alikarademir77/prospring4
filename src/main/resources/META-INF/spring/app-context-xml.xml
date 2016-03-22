@@ -6,81 +6,92 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<!-- 	<bean id="messageProvider" class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider" c:message="Configurable Message!"/>
-	<bean id="constructorConfusion" class="com.apress.prospring4.ch3.xml.ConstructorConfusion">
-		<constructor-arg value="90" type="int"/>
-	</bean>
+<!-- 	<bean id="messageProvider" class="com.apress.prospring4.ch3.xml.ConfigurableMessageProvider" c:message="Configurable Message!"/> -->
+<!-- 	<bean id="constructorConfusion" class="com.apress.prospring4.ch3.xml.ConstructorConfusion"> -->
+<!-- 		<constructor-arg value="90" type="int"/> -->
+<!-- 	</bean> -->
 	
-	<bean id="injectSimpleConfig" class="com.apress.prospring4.ch3.xml.InjectSimpleConfig"/>
+<!-- 	<bean id="injectSimpleConfig" class="com.apress.prospring4.ch3.xml.InjectSimpleConfig"/> -->
 	
-	<bean id="oracle" name="wiseworm" class="com.apress.prospring4.ch3.BookwormOracle"/>
+<!-- 	<bean id="oracle" name="wiseworm" class="com.apress.prospring4.ch3.BookwormOracle"/> -->
 
-	<bean id="inject" class="com.apress.prospring4.ch3.xml.InjectSimple" 
-		p:age="32" p:ageInSeconds="58799999" 
-		p:height="178.58" p:name="Chris" p:programmer="true"/>
+<!-- 	<bean id="inject" class="com.apress.prospring4.ch3.xml.InjectSimple"  -->
+<!-- 		p:age="32" p:ageInSeconds="58799999"  -->
+<!-- 		p:height="178.58" p:name="Chris" p:programmer="true"/> -->
 	
-	<bean id="injectSimpleSPel" class="com.apress.prospring4.ch3.xml.InjectSimpleSPel"  
-		p:age="#{injectSimpleConfig.age}" p:ageInSeconds="#{injectSimpleConfig.ageInSeconds}" 
-		p:height="#{injectSimpleConfig.height}" p:name="#{injectSimpleConfig.name}" p:programmer="#{injectSimpleConfig.programmer}"/>
+<!-- 	<bean id="injectSimpleSPel" class="com.apress.prospring4.ch3.xml.InjectSimpleSPel"   -->
+<!-- 		p:age="#{injectSimpleConfig.age}" p:ageInSeconds="#{injectSimpleConfig.ageInSeconds}"  -->
+<!-- 		p:height="#{injectSimpleConfig.height}" p:name="#{injectSimpleConfig.name}" p:programmer="#{injectSimpleConfig.programmer}"/> -->
 
-	<bean id="injectRef" class="com.apress.prospring4.ch3.xml.InjectRef">
-		<property name="oracle">
-			<ref bean="wiseworm"/>
-		</property>
-	</bean>
+<!-- 	<bean id="injectRef" class="com.apress.prospring4.ch3.xml.InjectRef"> -->
+<!-- 		<property name="oracle"> -->
+<!-- 			<ref bean="wiseworm"/> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
 	
-	<bean id="target1" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBeanParent"/>
-	<bean id="target2" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBean"/>
-	<bean id="target3" class="com.apress.prospring4.ch3.SimpleTarget">
-		<property name="val">
-			<ref parent="injectBean"/>
-		</property>
-	</bean> 
+<!-- 	<bean id="target1" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBeanParent"/> -->
+<!-- 	<bean id="target2" class="com.apress.prospring4.ch3.SimpleTarget" p:val-ref="injectBean"/> -->
+<!-- 	<bean id="target3" class="com.apress.prospring4.ch3.SimpleTarget"> -->
+<!-- 		<property name="val"> -->
+<!-- 			<ref parent="injectBean"/> -->
+<!-- 		</property> -->
+<!-- 	</bean>  -->
 	
 
-	<bean name="injectBean" class="java.lang.String" c:_0="Bean in child"/>
+<!-- 	<bean name="injectBean" class="java.lang.String" c:_0="Bean in child"/> -->
 	
-	<bean id="injectCollection" class="com.apress.prospring4.ch3.xml.CollectionInjection">
-		<property name="map">
-			<map>
-				<entry key="someValue">
-					<value>Hello World!</value>
-				</entry>
-				<entry key="someBean">
-					<ref bean="oracle"/>
-				</entry>
-			</map>
-		</property>
-		<property name="props">
-			<props>
-				<prop key="firstName">Chris</prop>
-				<prop key="lastName">Schafer</prop>
-			</props>
-		</property>
-		<property name="set">
-			<set>
-				<value>Hello World!</value>
-				<ref bean="oracle"/>
-			</set>
-		</property>
-		<property name="list">
-			<list>
-				<value>Hello World!</value>
-				<ref bean="oracle"/>
-			</list>
-		</property>
+<!-- 	<bean id="injectCollection" class="com.apress.prospring4.ch3.xml.CollectionInjection"> -->
+<!-- 		<property name="map"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="someValue"> -->
+<!-- 					<value>Hello World!</value> -->
+<!-- 				</entry> -->
+<!-- 				<entry key="someBean"> -->
+<!-- 					<ref bean="oracle"/> -->
+<!-- 				</entry> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 		<property name="props"> -->
+<!-- 			<props> -->
+<!-- 				<prop key="firstName">Chris</prop> -->
+<!-- 				<prop key="lastName">Schafer</prop> -->
+<!-- 			</props> -->
+<!-- 		</property> -->
+<!-- 		<property name="set"> -->
+<!-- 			<set> -->
+<!-- 				<value>Hello World!</value> -->
+<!-- 				<ref bean="oracle"/> -->
+<!-- 			</set> -->
+<!-- 		</property> -->
+<!-- 		<property name="list"> -->
+<!-- 			<list> -->
+<!-- 				<value>Hello World!</value> -->
+<!-- 				<ref bean="oracle"/> -->
+<!-- 			</list> -->
+<!-- 		</property> -->
 
-	</bean>
- -->	
-	<bean id="helper" class="com.apress.prospring4.ch3.MyHelper" scope="prototype"/>
+<!-- 	</bean> -->
 	
-	<bean id="abstractLookupBean" class="com.apress.prospring4.ch3.AbstractLookupDemoBean">
-		<lookup-method name="getMyHelper" bean="helper"/>
+<!-- 	<bean id="helper" class="com.apress.prospring4.ch3.MyHelper" scope="prototype"/> -->
+	
+<!-- 	<bean id="abstractLookupBean" class="com.apress.prospring4.ch3.AbstractLookupDemoBean"> -->
+<!-- 		<lookup-method name="getMyHelper" bean="helper"/> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean id="standardLookupBean" class="com.apress.prospring4.ch3.StandardLookupDemoBean"> -->
+<!-- 		<property name="myHelper"> -->
+<!-- 			<ref bean="helper"/> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+	<bean id="replacer" class="com.apress.prospring4.ch3.FormatMessageReplacer"/>
+	
+	<bean id="replacementTarget" class="com.apress.prospring4.ch3.ReplacementTarget">
+		<replaced-method name="formatMessage" replacer="replacer">
+			<arg-type>String</arg-type>
+		</replaced-method>
 	</bean>
 	
-	<bean id="standardLookupBean" class="com.apress.prospring4.ch3.StandardLookupDemoBean">
-		<property name="myHelper">
-			<ref bean="helper"/>
-		</property>
-	</bean>
+	<bean id="standardTarget" class="com.apress.prospring4.ch3.ReplacementTarget"/>
+	
 </beans>
