@@ -84,14 +84,16 @@
 <!-- 		</property> -->
 <!-- 	</bean> -->
 
-	<bean id="replacer" class="com.apress.prospring4.ch3.FormatMessageReplacer"/>
+<!-- 	<bean id="replacer" class="com.apress.prospring4.ch3.FormatMessageReplacer"/> -->
 	
-	<bean id="replacementTarget" class="com.apress.prospring4.ch3.ReplacementTarget">
-		<replaced-method name="formatMessage" replacer="replacer">
-			<arg-type>String</arg-type>
-		</replaced-method>
-	</bean>
+<!-- 	<bean id="replacementTarget" class="com.apress.prospring4.ch3.ReplacementTarget"> -->
+<!-- 		<replaced-method name="formatMessage" replacer="replacer"> -->
+<!-- 			<arg-type>String</arg-type> -->
+<!-- 		</replaced-method> -->
+<!-- 	</bean> -->
 	
-	<bean id="standardTarget" class="com.apress.prospring4.ch3.ReplacementTarget"/>
+<!-- 	<bean id="standardTarget" class="com.apress.prospring4.ch3.ReplacementTarget"/> -->
 	
+	<bean id="name1" name="name2 name3,name4;name5" class="java.lang.String"/>
+	<alias name="name2" alias="name6"/>
 </beans>
