@@ -45,9 +45,16 @@ public class Target {
 		ctx.refresh();
 		
 		Target t = null;
+
 		System.out.println("Using byName:\n");
 		t = (Target) ctx.getBean("targetByName");
 
+		System.out.println("Using byType:\n");
+		t = (Target) ctx.getBean("targetByType");
+
+		System.out.println("Using constructor:\n");
+		t = (Target) ctx.getBean("targetConstructor");
+		
 	}
 
 }

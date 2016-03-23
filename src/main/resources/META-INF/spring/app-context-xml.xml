@@ -101,10 +101,13 @@
 	<bean id="foo" class="com.apress.prospring4.ch3.Foo"/>
 	<bean id="bar1" class="com.apress.prospring4.ch3.Bar"/>
 
-	<bean id="targetByName" autowire="byName" class="com.apress.prospring4.ch3.xml.Target"
-	lazy-init="true"/>
-<!-- <bean id="targetByType" autowire="byType" class="com.apress.prospring4.ch3.xml.Target" -->
-<!-- lazy-init="true"/> -->
-<!-- <bean id="targetConstructor" autowire="constructor" -->
-<!-- class="com.apress.prospring4.ch3.xml.Target" lazy-init="true"/ -->
+	<bean id="targetByName" autowire="byName"
+		class="com.apress.prospring4.ch3.xml.Target" lazy-init="true" />
+
+	<bean id="targetByType" autowire="byType"
+		class="com.apress.prospring4.ch3.xml.Target" lazy-init="true" />
+
+	<bean id="targetConstructor" autowire="constructor"
+		class="com.apress.prospring4.ch3.xml.Target" lazy-init="true" />
+
 </beans>
