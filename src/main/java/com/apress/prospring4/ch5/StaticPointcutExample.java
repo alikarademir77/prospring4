@@ -21,6 +21,7 @@ public class StaticPointcutExample {
 		
 
 		pf = new ProxyFactory();
+		
 		pf.addAdvisor(defaultAdvisor);
 		pf.setTarget(new BeanTwo());
 		
