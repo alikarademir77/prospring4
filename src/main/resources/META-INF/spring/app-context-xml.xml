@@ -157,7 +157,6 @@
 <!-- 			</bean> -->
 <!-- 		</property> -->
 <!-- 	</bean> -->
-<<<<<<< fb930d7363b2d37f44f90754fd728f7ce167e91f
 
 		<aop:config>
 			<aop:pointcut id="fooExecution"
@@ -175,20 +174,4 @@
 		<bean id="myBean" class="com.apress.prospring4.ch5.MyBean">
 				<property name="dep" ref="myDependency" />
 		</bean>
-=======
-	
-	<bean id="bean" class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="target">
-			<bean class="com.apress.prospring4.ch5.TargetBean"/>
-		</property>
-		<property name="interceptorNames">
-			<list>
-				<value>advisor</value>
-			</list>
-		</property>
-		<property name="proxyTargetClass"><value>true</value></property>
-	</bean>	
-	
-	<bean id="advisor" class="com.apress.prospring4.ch5.IsModifiedAdvisor"/>
->>>>>>> introduction config
 </beans>
