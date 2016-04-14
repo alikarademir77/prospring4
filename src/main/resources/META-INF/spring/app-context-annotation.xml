@@ -4,32 +4,36 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
-	<context:component-scan base-package="com.apress.prospring4.ch3.annotation"/>
+<!-- 	<context:component-scan base-package="com.apress.prospring4.ch3.annotation"/> -->
 
-	<bean id="message" class="java.lang.String" c:_0="Configured Constructor Message!"/>
+<!-- 	<bean id="message" class="java.lang.String" c:_0="Configured Constructor Message!"/> -->
 	
-	<util:map id="map" map-class="java.util.HashMap">
-		<entry key="someValue">
-			<value>Hello World!</value>
-		</entry>
-		<entry key="someBean">
-			<ref bean="oracle"/>
-		</entry>
-	</util:map>
-	<util:properties id="props">
-		<prop key="firstName">Chris</prop>
-		<prop key="lastName">Schafer</prop>
-	</util:properties>
-	<util:list id="list">
-		<value>Hello World!</value>
-		<ref bean="oracle"/>
-	</util:list>
-	<util:set id="set" set-class="java.util.HashSet">
-		<value>Hello World!</value>
-		<ref bean="oracle"/>
-	</util:set>
+<!-- 	<util:map id="map" map-class="java.util.HashMap"> -->
+<!-- 		<entry key="someValue"> -->
+<!-- 			<value>Hello World!</value> -->
+<!-- 		</entry> -->
+<!-- 		<entry key="someBean"> -->
+<!-- 			<ref bean="oracle"/> -->
+<!-- 		</entry> -->
+<!-- 	</util:map> -->
+<!-- 	<util:properties id="props"> -->
+<!-- 		<prop key="firstName">Chris</prop> -->
+<!-- 		<prop key="lastName">Schafer</prop> -->
+<!-- 	</util:properties> -->
+<!-- 	<util:list id="list"> -->
+<!-- 		<value>Hello World!</value> -->
+<!-- 		<ref bean="oracle"/> -->
+<!-- 	</util:list> -->
+<!-- 	<util:set id="set" set-class="java.util.HashSet"> -->
+<!-- 		<value>Hello World!</value> -->
+<!-- 		<ref bean="oracle"/> -->
+<!-- 	</util:set> -->
+	<aop:aspectj-autoproxy/>
+	<context:component-scan base-package="com.apress.prospring4.ch5"/>
 </beans>

@@ -1,5 +1,8 @@
 package com.apress.prospring4.ch5;
 
+import org.springframework.stereotype.Component;
+
+@Component("myDependency")
 public class MyDependency {
 
 	public void foo(int intValue) {
