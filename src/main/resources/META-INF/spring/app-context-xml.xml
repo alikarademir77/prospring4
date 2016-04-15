@@ -158,20 +158,29 @@
 <!-- 		</property> -->
 <!-- 	</bean> -->
 
-		<aop:config>
-			<aop:pointcut id="fooExecution"
-				expression="execution(* com.apress.prospring4.ch5..foo*(int)) and args(intValue) and bean(myDependency*)" />
-			<aop:aspect ref="advice">
-				<aop:before pointcut-ref="fooExecution" method="simpleBeforeAdvice" />
-				<aop:around pointcut-ref="fooExecution" method="simpleAroundAdvice"/>
-			</aop:aspect>
-		</aop:config>
+<!-- 		<aop:config> -->
+<!-- 			<aop:pointcut id="fooExecution" -->
+<!-- 				expression="execution(* com.apress.prospring4.ch5..foo*(int)) and args(intValue) and bean(myDependency*)" /> -->
+<!-- 			<aop:aspect ref="advice"> -->
+<!-- 				<aop:before pointcut-ref="fooExecution" method="simpleBeforeAdvice" /> -->
+<!-- 				<aop:around pointcut-ref="fooExecution" method="simpleAroundAdvice"/> -->
+<!-- 			</aop:aspect> -->
+<!-- 		</aop:config> -->
 		
-		<bean id="advice" class="com.apress.prospring4.ch5.MyAdvice"/>
+<!-- 		<bean id="advice" class="com.apress.prospring4.ch5.MyAdvice"/> -->
 
-		<bean id="myDependency" class="com.apress.prospring4.ch5.MyDependency" />
+<!-- 		<bean id="myDependency" class="com.apress.prospring4.ch5.MyDependency" /> -->
 		
-		<bean id="myBean" class="com.apress.prospring4.ch5.MyBean">
-				<property name="dep" ref="myDependency" />
-		</bean>
+<!-- 		<bean id="myBean" class="com.apress.prospring4.ch5.MyBean"> -->
+<!-- 				<property name="dep" ref="myDependency" /> -->
+<!-- 		</bean> -->
+
+	<bean id="aspect" class="com.apress.prospring4.ch5.MessageWrapper" factory-method="aspectOf">
+		<property name="prefix">
+			<value>The prefix</value>
+		</property>	
+		<property name="suffix">
+			<value>The suffix</value>
+		</property>	
+	</bean>
 </beans>
